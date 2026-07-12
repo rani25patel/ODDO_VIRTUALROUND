@@ -10,7 +10,10 @@ const {
     getAssetById,
     addAsset,
     updateAsset,
-    deleteAsset
+    deleteAsset,
+    searchAssests,
+    filterByStatus,
+    filterByDepartment
 } = require("../controllers/assetController");
 
 // ==============================

@@ -1,28 +1,13 @@
-/**
- * routes/dashboardRoutes.js
- * Screen 2 - Dashboard / Home.
- * getKpis reads the v_dashboard_kpis view; getOverdueReturns reads
- * v_overdue_allocations; getUpcomingBookings reads v_upcoming_bookings.
- */
+const express = require("express");
 
-'use strict';
-
-const express = require('express');
 const router = express.Router();
 
-const dashboardController = require('../controllers/dashboardController');
-const { authenticate } = require('../middleware/auth');
+const auth = require("../middleware/auth");
 
-router.use(authenticate);
+const {
+    getDashboard
+} = require("../controllers/dashboardController");
 
-// GET /api/dashboard/kpis - Assets Available, Assets Allocated, Maintenance Today,
-// Active Bookings, Pending Transfers, Upcoming Returns, Overdue Returns
-router.get('/kpis', dashboardController.getKpis);
-
-// GET /api/dashboard/overdue-returns
-router.get('/overdue-returns', dashboardController.getOverdueReturns);
-
-// GET /api/dashboard/upcoming-bookings
-router.get('/upcoming-bookings', dashboardController.getUpcomingBookings);
+router.get("/", auth, getDashboard);
 
 module.exports = router;

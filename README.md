@@ -111,125 +111,35 @@ Role-Based Modular Architecture
 RESTful API
 MVC Pattern
 
-📁 Project Structure
 
+## 📁 Project Structure
 
-
+```text
 AssetFlow/
-│
 ├── Frontend/
-│
 │   ├── css/
-│   │      global.css
-│   │      dashboard.css
-│   │      forms.css
-│   │      tables.css
-│   │      responsive.css
-│   │
 │   ├── js/
-│   │      app.js
-│   │      api.js
-│   │      auth.js
-│   │      dashboard.js
-│   │      asset.js
-│   │      booking.js
-│   │      maintenance.js
-│   │      audit.js
-│   │      report.js
-│   │      notifications.js
-│   │
 │   ├── pages/
-│   │      login.html
-│   │      dashboard.html
-│   │      departments.html
-│   │      employees.html
-│   │      categories.html
-│   │      assets.html
-│   │      allocation.html
-│   │      booking.html
-│   │      maintenance.html
-│   │      audit.html
-│   │      reports.html
-│   │      notifications.html
-│   │      profile.html
-│   │
 │   ├── components/
-│   │      navbar.html
-│   │      sidebar.html
-│   │      footer.html
-│   │      modal.html
-│   │
 │   ├── images/
-│   │
 │   └── index.html
 │
 ├── Backend/
-│
 │   ├── config/
-│   │      db.js
-│   │      jwt.js
-│   │
 │   ├── controllers/
-│   │      authController.js
-│   │      dashboardController.js
-│   │      departmentController.js
-│   │      employeeController.js
-│   │      categoryController.js
-│   │      assetController.js
-│   │      allocationController.js
-│   │      bookingController.js
-│   │      maintenanceController.js
-│   │      auditController.js
-│   │      reportController.js
-│   │      notificationController.js
-│   │
 │   ├── routes/
-│   │      authRoutes.js
-│   │      dashboardRoutes.js
-│   │      departmentRoutes.js
-│   │      employeeRoutes.js
-│   │      categoryRoutes.js
-│   │      assetRoutes.js
-│   │      allocationRoutes.js
-│   │      bookingRoutes.js
-│   │      maintenanceRoutes.js
-│   │      auditRoutes.js
-│   │      reportRoutes.js
-│   │      notificationRoutes.js
-│   │
 │   ├── middleware/
-│   │      auth.js
-│   │      upload.js
-│   │      errorHandler.js
-│   │
 │   ├── models/
-│   │      User.js
-│   │      Department.js
-│   │      Employee.js
-│   │      Category.js
-│   │      Asset.js
-│   │      Allocation.js
-│   │      Booking.js
-│   │      Maintenance.js
-│   │      Audit.js
-│   │      Notification.js
-│   │
 │   ├── uploads/
-│   │
-│   ├── server.js
-│   ├── package.json
-│   └── .env
+│   └── server.js
 │
 ├── Database/
 │   ├── schema.sql
-│   ├── seed.sql
-│   ├── procedures.sql
-│   ├── triggers.sql
-│   └── views.sql
+│   └── seed.sql
 │
 ├── docs/
-│   ├── API.md
-│   ├── Architecture.md
-│   └── README.md
-│
 └── README.md
+```
+
+
+

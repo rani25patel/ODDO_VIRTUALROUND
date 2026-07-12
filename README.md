@@ -116,30 +116,78 @@ MVC Pattern
 
 ```text
 AssetFlow/
+│
 ├── Frontend/
 │   ├── css/
+│   │   ├── global.css
+│   │   ├── dashboard.css
+│   │   ├── forms.css
+│   │   ├── tables.css
+│   │   └── responsive.css
+│   │
 │   ├── js/
+│   │   ├── app.js
+│   │   ├── api.js
+│   │   ├── auth.js
+│   │   ├── dashboard.js
+│   │   ├── asset.js
+│   │   ├── booking.js
+│   │   ├── maintenance.js
+│   │   ├── audit.js
+│   │   ├── report.js
+│   │   └── notifications.js
+│   │
 │   ├── pages/
+│   │   ├── login.html
+│   │   ├── dashboard.html
+│   │   ├── departments.html
+│   │   ├── employees.html
+│   │   ├── categories.html
+│   │   ├── assets.html
+│   │   ├── allocation.html
+│   │   ├── booking.html
+│   │   ├── maintenance.html
+│   │   ├── audit.html
+│   │   ├── reports.html
+│   │   ├── notifications.html
+│   │   └── profile.html
+│   │
 │   ├── components/
+│   │   ├── navbar.html
+│   │   ├── sidebar.html
+│   │   ├── footer.html
+│   │   └── modal.html
+│   │
 │   ├── images/
 │   └── index.html
 │
 ├── Backend/
 │   ├── config/
+│   │   ├── db.js
+│   │   └── jwt.js
+│   │
 │   ├── controllers/
 │   ├── routes/
 │   ├── middleware/
 │   ├── models/
 │   ├── uploads/
-│   └── server.js
+│   ├── server.js
+│   ├── package.json
+│   └── .env
 │
 ├── Database/
 │   ├── schema.sql
-│   └── seed.sql
+│   ├── seed.sql
+│   ├── procedures.sql
+│   ├── triggers.sql
+│   └── views.sql
 │
 ├── docs/
+│   ├── API.md
+│   ├── Architecture.md
+│   └── README.md
+│
 └── README.md
 ```
-
 
 

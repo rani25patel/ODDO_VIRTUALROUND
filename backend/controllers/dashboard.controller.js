@@ -1,13 +1,52 @@
-/**
- * controllers/dashboardController.js
- * Placeholder controllers for this route group (Backend Foundation phase).
- * Each export is stubbed with notImplemented(); real DB logic lands in the next phase.
- */
+const { pool } = require("../config/db");
 
-'use strict';
+exports.getDashboard = async (req, res) => {
 
-const notImplemented = require('./_stub');
+    try {
 
-exports.getKpis = notImplemented('dashboardController -> getKpis');
-exports.getOverdueReturns = notImplemented('dashboardController -> getOverdueReturns');
-exports.getUpcomingBookings = notImplemented('dashboardController -> getUpcomingBookings');
+        const [[assets]] = await pool.query(
+            "SELECT COUNT(*) AS totalAssets FROM assets"
+        );
+
+        const [[available]] = await pool.query(
+            "SELECT COUNT(*) AS availableAssets FROM assets WHERE status='Available'"
+        );
+
+        const [[allocated]] = await pool.query(
+            "SELECT COUNT(*) AS allocatedAssets FROM assets WHERE status='Allocated'"
+        );
+
+        const [[maintenance]] = await pool.query(
+            "SELECT COUNT(*) AS maintenanceAssets FROM assets WHERE status='Maintenance'"
+        );
+
+        const [[employees]] = await pool.query(
+            "SELECT COUNT(*) AS totalEmployees FROM users"
+        );
+
+        const [[departments]] = await pool.query(
+            "SELECT COUNT(*) AS totalDepartments FROM departments"
+        );
+
+        res.status(200).json({
+            success: true,
+            data: {
+                totalAssets: assets.totalAssets,
+                availableAssets: available.availableAssets,
+                allocatedAssets: allocated.allocatedAssets,
+                maintenanceAssets: maintenance.maintenanceAssets,
+                totalEmployees: employees.totalEmployees,
+                totalDepartments: departments.totalDepartments
+            }
+        });
+
+    } catch (error) {
+
+        res.status(500).json({
+            success: false,
+            message: error.message
+        });
+
+    }
+
+};
